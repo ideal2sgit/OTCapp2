@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#3cf61e1e">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/codart"
+            android:textColor="#df0505"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:textStyle="bold"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/designation"
+        android:textStyle="bold"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:textSize="16dp"
+        android:textColor="#040d74" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type :  "
+            android:id="@+id/textView31"
+            android:textStyle="bold"
+            android:textColor="#575555"
+            android:textIsSelectable="false"
+            android:textSize="18dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/type"
+            android:textColor="@color/material_grey_600"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Marque :"
+            android:id="@+id/textView32"
+            android:textStyle="bold"
+            android:textColor="#575555"
+            android:textIsSelectable="false"
+            android:textSize="18dp"
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/marque"
+            android:textColor="@color/material_grey_600"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Famille : "
+            android:id="@+id/textView33"
+            android:textStyle="bold"
+            android:textColor="#575555"
+            android:textIsSelectable="false"
+            android:textSize="18dp"
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/famille"
+            android:textColor="@color/material_grey_600"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prix Achat HT : "
+            android:id="@+id/textView4"
+            android:textStyle="bold"
+            android:textColor="#575555"
+            android:textIsSelectable="false"
+            android:textSize="18dp" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/prixachatht" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dernier prix Achat HT : "
+            android:id="@+id/textView10"
+            android:textStyle="bold"
+            android:textColor="#575555"
+            android:textIsSelectable="false"
+            android:textSize="18dp" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/dernierpaht" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LiteRemise :"
+            android:id="@+id/textView11"
+            android:textStyle="bold"
+            android:textColor="#575555"
+            android:textIsSelectable="false"
+            android:textSize="18dp" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/remise" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DernierTauxRemise :"
+            android:id="@+id/textView12"
+            android:textStyle="bold"
+            android:textColor="#575555"
+            android:textIsSelectable="false"
+            android:textSize="18dp" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tauxremise" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dernier Prix Devise :"
+            android:id="@+id/textView26"
+            android:textStyle="bold"
+            android:textColor="#575555"
+            android:textIsSelectable="false"
+            android:textSize="18dp" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/prixdevise" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prix TTC :"
+            android:id="@+id/textView5"
+            android:textStyle="bold"
+            android:textColor="#575555"
+            android:textIsSelectable="false"
+            android:textSize="18dp" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/prixttc" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stockable"
+            android:id="@+id/stockable"
+            android:checked="false"
+            android:textStyle="bold" />
+
+     <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Destockage"
+            android:id="@+id/destokage"
+            android:checked="false"
+            android:textStyle="bold" />
+
+       <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Actif"
+            android:id="@+id/actif"
+            android:checked="false"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

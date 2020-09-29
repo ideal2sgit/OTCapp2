@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.faten.testsql.Choixclient">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <SearchView
+            android:id="@+id/search_bar_client"
+            android:background="@drawable/buttonround"
+            android:layout_width="match_parent"
+            android:hint="Rechercher Article"
+            android:layout_height="40dp"
+            android:layout_margin="10dp">
+
+
+        </SearchView>
+        <ListView
+            android:id="@+id/lv_list_client"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:divider="#808080"
+            android:dividerHeight="1dp"
+            android:padding="5dp">
+
+        </ListView>
+
+    </LinearLayout>
+</RelativeLayout>

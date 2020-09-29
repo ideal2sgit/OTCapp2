@@ -1,0 +1,869 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            card_view:cardCornerRadius="5dp"
+            card_view:contentPadding="10dp"
+            card_view:cardBackgroundColor="#edfcf9f9"
+            card_view:cardElevation="6dp"
+            card_view:cardMaxElevation="6dp">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_livreur"
+                    android:padding="5dp"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:text="Représentant : "
+                            android:textSize="15dp"
+                            android:gravity="center"/>
+
+
+                        <TextView
+                            android:id="@+id/txt_nom_prenom_livreur"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:text="Nom Prenom"
+                            android:textSize="15dp"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"/>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+          >
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+
+
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/btn_client"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:layout_margin="10dp"
+                        card_view:cardCornerRadius="5dp"
+                        card_view:contentPadding="10dp"
+                        card_view:cardBackgroundColor="#edfcf9f9"
+                        card_view:cardElevation="6dp"
+                        card_view:cardMaxElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/ic_customer"
+                                android:padding="13dp"/>
+
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="10dp"
+                                android:src="@drawable/line_h"
+                                />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:layout_marginTop="10dp"
+                                android:textSize="15dp"
+                                android:text="Client"/>
+
+
+
+
+
+
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/btn_article"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:layout_margin="10dp"
+                        card_view:cardCornerRadius="5dp"
+                        card_view:contentPadding="10dp"
+                        card_view:cardBackgroundColor="#edfcf9f9"
+                        card_view:cardElevation="6dp"
+                        card_view:cardMaxElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/ic_article"
+                                android:padding="15dp"/>
+
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="10dp"
+                                android:src="@drawable/line_h" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:layout_marginTop="10dp"
+                                android:text="Article"
+                                android:textSize="15dp"
+                                android:gravity="center"/>
+
+
+
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+
+
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+
+
+                </LinearLayout>
+
+              <!--  <LinearLayout
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/btn_passation_bon_retour"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:layout_margin="10dp"
+                        card_view:cardCornerRadius="5dp"
+                        card_view:contentPadding="10dp"
+                        card_view:cardBackgroundColor="#edfcf9f9"
+                        card_view:cardElevation="6dp"
+                        card_view:cardMaxElevation="6dp">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+
+                            <RelativeLayout
+                                android:layout_width="80dp"
+                                android:layout_height="80dp">
+
+                                <ImageView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:src="@drawable/ic_bl_p"
+                                    android:padding="15dp"/>
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:src="@drawable/ic_retour"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="0dp"/>
+
+
+                            </RelativeLayout>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/lightgray"
+                                android:layout_margin="2dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:layout_marginTop="10dp"
+                                android:text="Passation Bon Retour"
+                                android:textSize="11dp"
+                                android:gravity="center"/>
+
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/btn_passation_bon_livraison"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:layout_margin="10dp"
+                        card_view:cardCornerRadius="5dp"
+                        card_view:contentPadding="10dp"
+                        card_view:cardBackgroundColor="#edfcf9f9"
+                        card_view:cardElevation="6dp"
+                        card_view:cardMaxElevation="6dp">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+
+                            <RelativeLayout
+                                android:layout_width="80dp"
+                                android:layout_height="80dp">
+
+                                <ImageView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:src="@drawable/ic_bl_p"
+                                    android:padding="15dp"/>
+
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:src="@drawable/ic_pass_bl"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="0dp"/>
+
+
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/lightgray"
+                                android:layout_margin="2dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:layout_marginTop="10dp"
+                                android:text="Passation Bon Livraison"
+                                android:textSize="11dp"
+                                android:gravity="center"/>
+
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>-->
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/btn_inventaire"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:layout_margin="10dp"
+                        card_view:cardCornerRadius="5dp"
+                        card_view:contentPadding="10dp"
+                        card_view:cardBackgroundColor="#edfcf9f9"
+                        card_view:cardElevation="6dp"
+                        card_view:cardMaxElevation="6dp">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/ic_inventaire_"
+                                android:padding="15dp"/>
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="10dp"
+                                android:src="@drawable/line_h"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:layout_marginTop="10dp"
+                                android:text=" Inventaire "
+                                android:textSize="10dp"
+                                android:gravity="center"/>
+
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/btn_cmd_avec_terminal"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:layout_margin="10dp"
+                        card_view:cardCornerRadius="5dp"
+                        card_view:contentPadding="10dp"
+                        card_view:cardBackgroundColor="#edfcf9f9"
+                        card_view:cardElevation="6dp"
+                        card_view:cardMaxElevation="6dp">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/ic_bc_code_barre"
+                                android:padding="15dp"/>
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="10dp"
+                                android:src="@drawable/line_h"  />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:layout_marginTop="10dp"
+                                android:text="Bon Commande avec terminal"
+                                android:textSize="11dp"
+                                android:gravity="center"/>
+
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/btn_suivie_recouvrement"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:layout_margin="10dp"
+                        card_view:cardCornerRadius="5dp"
+                        card_view:contentPadding="10dp"
+                        card_view:cardBackgroundColor="#edfcf9f9"
+                        card_view:cardElevation="6dp"
+                        card_view:cardMaxElevation="6dp">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+
+                            <RelativeLayout
+                                android:layout_width="80dp"
+                                android:layout_height="80dp">
+
+                                <ImageView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:src="@drawable/ic_recouvrement"
+                                    android:padding="13dp"/>
+
+
+
+                            </RelativeLayout>
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="10dp"
+                                android:src="@drawable/line_h"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:layout_marginTop="10dp"
+                                android:text="Recouvrement"
+                                android:textSize="15dp"
+                                android:gravity="center"/>
+
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/btn_historique_bc"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:layout_margin="10dp"
+                        card_view:cardCornerRadius="5dp"
+                        card_view:contentPadding="10dp"
+                        card_view:cardBackgroundColor="#edfcf9f9"
+                        card_view:cardElevation="6dp"
+                        card_view:cardMaxElevation="6dp">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+
+                            <RelativeLayout
+                                android:layout_width="80dp"
+                                android:layout_height="80dp">
+
+                                <ImageView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:src="@drawable/ic_historique_bc"
+                                    android:padding="13dp"/>
+
+
+
+                            </RelativeLayout>
+
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="10dp"
+                                android:src="@drawable/line_h"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:layout_marginTop="10dp"
+                                android:text="Historique Bon Commande"
+                                android:textSize="15dp"
+                                android:gravity="center"/>
+
+
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/btn_bon_commande"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:layout_margin="10dp"
+                        card_view:cardCornerRadius="5dp"
+                        card_view:contentPadding="10dp"
+                        card_view:cardBackgroundColor="#edfcf9f9"
+                        card_view:cardElevation="6dp"
+                        card_view:cardMaxElevation="6dp"
+                        android:visibility="gone">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+
+                            <RelativeLayout
+                                android:layout_width="80dp"
+                                android:layout_height="80dp">
+
+                                <ImageView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:src="@drawable/ic_bon_cmd"
+                                    android:padding="15dp"/>
+
+
+                                <TextView
+                                    android:id="@+id/txt_nbr_bt"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+
+                                    android:text="1"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="0dp"/>
+
+                            </RelativeLayout>
+
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="10dp"
+                                android:src="@drawable/line_h"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:layout_marginTop="10dp"
+                                android:text="Passation Bon Commande"
+                                android:textSize="11dp"
+                                android:gravity="center"/>
+
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+
+
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/btn_mes_demande_et_demande_des_autre"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:layout_margin="10dp"
+                        card_view:cardCornerRadius="5dp"
+                        card_view:contentPadding="10dp"
+                        card_view:cardBackgroundColor="#edfcf9f9"
+                        card_view:cardElevation="6dp"
+                        card_view:cardMaxElevation="6dp">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/ic_commande_avec_terminal"
+                                android:padding="15dp"/>
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="10dp"
+                                android:src="@drawable/line_h"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:layout_marginTop="10dp"
+                                android:text="Mes demandes  &amp;  demandes des autres "
+                                android:textSize="11dp"
+                                android:gravity="center"/>
+
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+
+                </LinearLayout>
+
+
+
+        <!--
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/btn_livrer_produit"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:layout_margin="10dp"
+                        card_view:cardCornerRadius="5dp"
+                        card_view:contentPadding="10dp"
+                        card_view:cardBackgroundColor="#edfcf9f9"
+                        card_view:cardElevation="6dp"
+                        card_view:cardMaxElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:padding="15dp"/>
+
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="10dp"
+                                android:src="@drawable/line_h"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:layout_marginTop="10dp"
+                                android:text="Maquette du jour \n(Livraison)"
+                                android:textSize="15dp"
+                                android:gravity="center"/>
+
+
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+
+
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/btn_notification"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:layout_margin="10dp"
+                        card_view:cardCornerRadius="5dp"
+                        card_view:contentPadding="10dp"
+                        card_view:cardBackgroundColor="#edfcf9f9"
+                        card_view:cardElevation="6dp"
+                        card_view:cardMaxElevation="6dp">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+
+                            <RelativeLayout
+                                android:layout_width="80dp"
+                                android:layout_height="80dp">
+
+                                <ImageView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:src="@drawable/ic_bon_cmd"
+                                    android:padding="15dp"/>
+
+
+
+
+                            </RelativeLayout>
+                            
+                            
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="10dp"
+                                android:src="@drawable/line_h" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:layout_marginTop="10dp"
+                                android:text=" Notifications "
+                                android:textSize="11dp"
+                                android:gravity="center"/>
+
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+
+
+                </LinearLayout>
+          -->
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+    <!--
+      <com.nightonke.boommenu.BoomMenuButton
+          android:id="@+id/bmb"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentBottom="true"
+          android:layout_alignParentRight="true"
+          android:layout_alignParentEnd="true"
+          app:bmb_buttonEnum="ham"
+          app:bmb_piecePlaceEnum="piecePlace_ham_5"
+          app:bmb_buttonPlaceEnum="buttonPlace_ham_5"
+          app:bmb_autoHide="false"
+          />
+
+
+
+      -->
+</RelativeLayout>

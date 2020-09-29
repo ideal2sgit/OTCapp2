@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EtatRecouvrementActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/texttotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="?attr/colorPrimaryDark"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:typeface="serif" />
+        <android.support.design.widget.TabLayout
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/tab_annee"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#e9e9e9"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:tabIndicatorColor="#7F0007"
+            app:tabSelectedTextColor="#7F0007"
+            app:tabMode="scrollable"
+            app:tabTextColor="@color/gris"/>
+
+        <android.support.design.widget.TabLayout
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/tab_mois"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#e9e9e9"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:tabIndicatorColor="#7F0007"
+            app:tabSelectedTextColor="#7F0007"
+            app:tabMode="scrollable"
+            app:tabTextColor="@color/gris"/>
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

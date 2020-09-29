@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#7F0007</color>
+    <color name="colorPrimaryDark">	#4B0004</color>
+    <color name="colorAccent">#971001</color>
+    <color name="colorPrimary2">#cf8a51</color>
+
+
+    <color name="ripple_lite">#737373</color>
+    <color name="lightgray">#DBD4C7</color>
+
+    <color name="black_overlay">#66000000</color>
+
+    <color name="gris_fonce">#717171</color>
+    <color name="gris">#acacac</color>
+    <color name="beige">#DBD4C7</color>
+    <color name="colortext">#FAFAFA</color>
+    <color name="blue">#00839e</color>
+    <color name="or">#bf9e09</color>
+    <color name="blue_fonce">#004b5b</color>
+    <color name="vert">#189379</color>
+    <color name="vert1">#19816b</color>
+    <color name="etat">#b7141f</color>
+    <color name="colortxt">#787878</color>
+
+
+
+
+
+    <color name="color0">#FFFFFF</color>
+    <color name="color1">#FAFAFA</color>
+    <color name="color2">#F5F5F5</color>
+    <color name="color3">#F0F0F0</color>
+    <color name="color4">#EBEBEB</color>
+    <color name="color5">#E6E6E6</color>
+    <color name="color6">#E1E1E1</color>
+    <color name="color7">#DCDCDC</color>
+    <color name="color8">#D7D7D7</color>
+    <color name="color9">#D2D2D2</color>
+    <color name="color10">#CDCDCD</color>
+    <color name="color11">#C8C8C8</color>
+    <color name="color12">#C3C3C3</color>
+    <color name="color13">#BEBEBE</color>
+    <color name="color14">#B9B9B9</color>
+    <color name="color15">#B4B4B4</color>
+    <color name="color16">#AFAFAF</color>
+    <color name="color17">#AAAAAA</color>
+    <color name="color18">#A5A5A5</color>
+    <color name="color19">#A0A0A0</color>
+    <color name="color20">#9B9B9B</color>
+
+
+
+    <color name="rouge_claire">#627f0007</color>
+
+
+    <color name="back_rouge">#fcf2f2</color>
+    <color name="back_vert">#f2fff5</color>
+    <color name="back_rouge_">#fde7e7</color>
+
+    <color name="back_bleu">#ebf0f5</color>
+
+    <color name="colorBlue">#04022d</color>
+    <color name="shadow">#cc222222</color>
+
+    <color name="rouge_clair">#e9e9e9</color>
+    <color name="rouge_clair2">#d9d8d8</color>
+
+    <color name="white">#ffffff</color>
+    <color name="deeppurple">#9670ff</color>
+    <color name="yello">#ffb300</color>
+    <color name="green">#00bfa5</color>
+
+    <color name="darkblue">#23283a</color>
+    <color name="testcolorblue">#152b38</color>
+    <color name="pink">#fe104d</color>
+    <color name="yellow">#ffd05b</color>
+    <color name="colorBlue2">#0066d2</color>
+
+    <color name="yello_dark">#c98d00</color>
+
+    <color name="orange">#f7923b</color>
+    <color name="perms_dangerous_grp_color">#33b5e5</color>
+    <color name="keyguard_text_color_unlock">#a7d84c</color>
+
+
+    <color name="back_piece_drafte">#f8fc92</color>
+    <color name="back_card_green">#f7ccff9f</color>
+    <color name="back_card_orange">#fce392</color>
+
+
+
+
+    <color name="separator_gray">#919191</color>
+
+
+    <color name="back_ground">#F5F3F5</color>
+    <color name="tab_background_selected">#7F0007</color>
+    <color name="tab_background_unselected">#d4d3d3</color>
+
+    <color name="color_alerte">#a10009</color>
+    <color name="color_info">#008c28</color>
+    <color name="color_info2">#78b348</color>
+    <color name="color_info_panier">#d64700</color>
+    <color name="progressBarColor">#7F0007</color>
+
+    <color name="backgroundProgressBarColor">#3C4146</color>
+
+    <color name="color_xt">#d8dbe1</color>
+    <color name="color_txt_cloture">#556684</color>
+
+
+    <color name="RedMail">#DB4437</color>
+    <color name="GreenCall">#16b65d</color>
+
+
+    <color name="color_txt_transfert">#f4502a</color>
+
+
+    <color name="color_g_1">#c12552</color>
+    <color name="color_g_2">#ff6600</color>
+    <color name="color_g_3">#f5c700</color>
+    <color name="color_g_4">#6a961f</color>
+    <color name="color_g_5">#56bc02</color>
+
+    <color name="color_g_6">#ccbe00</color>
+    <color name="color_g_7">#c97700</color>
+    <color name="color_g_8">#008aa9</color>
+    <color name="color_g_9">#6a008e</color>
+    <color name="color_g_10">#5851b1</color>
+
+    <color name="color_g_11">#008f88</color>
+    <color name="color_g_12">#2a6d67</color>
+    <color name="color_g_13">#d9508a</color>
+    <color name="color_g_14">#fe9507</color>
+    <color name="color_g_15">#fef778</color>
+
+    <color name="color_g_16">#6aa786</color>
+    <color name="color_g_17">#35c2d1</color>
+    <color name="color_g_18">#945031</color>
+    <color name="color_g_19">#14b197</color>
+    <color name="color_g_20">#e4c12b</color>
+
+
+    <color name="color_g_21">#0b3ca6</color>
+    <color name="color_g_22">#640bb1</color>
+
+
+</resources>

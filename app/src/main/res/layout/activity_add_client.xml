@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.faten.testsql.AddClient">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="49dp"
+            android:layout_height="60dp"
+            android:id="@+id/imageView2"
+            android:src="@drawable/user" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp">
+
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Raison"
+                android:id="@+id/rsclient"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:textColor="@color/material_blue_grey_800"      />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Responsable"
+                android:id="@+id/responsable"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:textColor="@color/material_blue_grey_800" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+        <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Matricule : "
+            android:id="@+id/textView57"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            android:textSize="18dp" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/matricule" />
+
+    </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Information banquaire"
+                android:id="@+id/textView47"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:textSize="18dp" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:id="@+id/btbanq"
+                android:background="@drawable/btajout"
+                android:layout_marginLeft="45dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact  "
+                android:id="@+id/textView50"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:textSize="18dp" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:id="@+id/btcontact"
+                android:background="@drawable/btajout"
+                android:layout_marginLeft="150dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Information générale"
+                android:id="@+id/textView54"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:textSize="18dp" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:id="@+id/btinfo"
+                android:background="@drawable/btajout"
+                android:layout_marginLeft="55dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fodec"
+                android:id="@+id/fodec"
+                android:checked="false"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Export"
+                android:id="@+id/export"
+                android:checked="false"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TVA"
+                android:id="@+id/paytva"
+                android:checked="false"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Assujetti"
+                android:id="@+id/assujetti"
+                android:checked="false"
+                android:textStyle="bold"
+                android:textSize="12dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+
+            <Button
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:id="@+id/btenregistrer"
+                android:background="@drawable/valider" />
+
+            <Button
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:id="@+id/btannuler"
+                android:background="@drawable/exit" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

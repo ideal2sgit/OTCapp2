@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="0dp"
+        android:background="#FFF"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        <LinearLayout
+            android:clipToPadding="false"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            >
+
+
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/buttonround">
+
+
+                <TextView
+                    android:id="@+id/date_debut"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#00000000"
+                    android:gravity="center"
+                    android:text="10/10/2019"
+                    android:textSize="12dp"
+                    android:layout_marginLeft="10dp"
+                    android:hint="Du"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_toStartOf="@+id/img1"
+                    android:layout_centerVertical="true" />
+
+                <ImageView
+                    android:id="@+id/img1"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:foregroundGravity="center"
+                    android:src="@drawable/ic_event_note_black_24dp"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/buttonround">
+
+
+                <TextView
+                    android:id="@+id/date_fin"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#00000000"
+                    android:text="10/10/2019"
+                    android:layout_marginLeft="10dp"
+                    android:inputType="number"
+                    android:hint="Au"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="center"
+                    android:layout_toStartOf="@+id/imageView2"
+                    android:textSize="12dp"/>
+
+
+
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:foregroundGravity="center"
+                    android:src="@drawable/ic_event_note_black_24dp"
+                    android:id="@+id/imageView2" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="130dp"
+        android:background="@drawable/round"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="Total Reçu"
+            android:textColor="#7F0007"
+            android:textSize="16sp"
+            android:typeface="serif" />
+
+
+
+
+        <TextView
+            android:id="@+id/txt_recu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="---.-- DT"
+            android:textColor="#7F0007"
+            android:textSize="16sp"
+            android:typeface="serif"
+            android:gravity="right"/>
+
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/lv_suivie_recouvrement"
+        android:layout_marginTop="175dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</android.support.design.widget.CoordinatorLayout>

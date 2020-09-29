@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.faten.testsql">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/i2s"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.SplachScreenActivity"
+            android:theme="@style/noactionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:theme="@style/noactionBar" />
+        <activity android:name=".activity.CompteDesactiveActivity" />
+        <activity android:name=".activity.ConnexionEuServeurEchoueActivity" />
+        <activity android:name=".activity.ParametrageActivity" />
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".activity.Accueil"
+            android:label="Accueil - liste des articles"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Clients"
+            android:label="Clients" />
+        <activity android:name=".BonDeCommandeActivity" />
+        <activity
+            android:name=".Validationcmd"
+            android:label="Validation de Commande" />
+        <activity
+            android:name=".activity.HistoriqueBonCommande"
+            android:label="Historique des Commandes" />
+        <activity
+            android:name=".Choixclient"
+            android:label="Commande Client" />
+        <activity android:name=".Crud" />
+        <activity android:name=".AddArticle" />
+        <activity android:name=".AddClient" />
+        <activity
+            android:name=".activity.FicheClientActivity"
+            android:label="Fiche Client" />
+        <activity android:name=".CodeBare" />
+        <activity
+            android:name=".EtatRecouvrementActivity"
+            android:label="Etat Recouvrement" />
+        <activity
+            android:name=".SuivieMensuelActivity"
+            android:label="Suivie Mensuel" />
+
+        <provider
+            android:name=".pdf.GenericFileProvider"
+            android:authorities="com.example.faten.testsql"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".activity.SuivieRecouvrementActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LoginTestActivity"
+            android:label="@string/title_activity_login_test" />
+        <activity
+            android:name=".activity.BonLivraisonActivity"
+            android:label="Bon Livraison Vente " />
+        <activity
+            android:name=".activity.LogintestActivity"
+            android:label="@string/title_activity_logintest" />
+        <activity
+            android:name=".activity.InventaireActivity"
+            android:label="Inventaire " />
+        <activity
+            android:name=".activity.MonInventaireActivity"
+            android:label="Mon Inventaire " />
+        <activity
+            android:name=".activity.BonCommandeVenteAvecTerminalActivity"
+            android:label="Commande Vente avec Choix" />
+        <activity
+            android:name=".activity.BonCommandeTerminalAutomatiqueActivity"
+            android:label="Commande Vente Automatique" />
+        <activity android:name=".activity.HistoriqueLigneBonCommandeActivity"></activity>
+    </application>
+
+</manifest>

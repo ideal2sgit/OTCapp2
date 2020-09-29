@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.faten.testsql.activity.Accueil"
+    tools:showIn="@layout/app_bar_accueil">
+
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+
+ <!--   <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <SearchView
+            android:id="@+id/search_bar_article"
+            android:background="@drawable/buttonround"
+            android:layout_width="match_parent"
+            android:hint="Rechercher Article"
+            android:inputType="textPersonName"
+            android:layout_height="40dp"
+            android:layout_margin="10dp">
+        </SearchView>
+
+
+
+
+
+
+
+
+        <ProgressBar
+            android:id="@+id/pbbar"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_gravity="center" />
+
+        <ListView
+            android:id="@+id/list_article"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:dividerHeight="0dp"
+            android:padding="5dp">
+
+        </ListView>
+
+
+
+    </LinearLayout>-->
+
+</RelativeLayout>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activity.CompteDesactiveActivity"
+    tools:showIn="@layout/activity_compte_desactive">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view = "http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_account"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        card_view:cardBackgroundColor="#d4f4f4f4"
+        android:clickable="true"
+        card_view:cardCornerRadius="6dp"
+        card_view:cardElevation="3dp"
+        card_view:cardMaxElevation="2dp"
+
+        android:layout_marginTop="20dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:background="@color/color_info_panier" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/txt_nom_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Désignation Désignation "
+                    android:textSize="13dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="80dp"
+                    android:background="@color/rouge_clair2"
+                    android:layout_below="@+id/txt_nom_user"/>
+
+
+
+                    <ImageView
+                        android:id="@+id/ic_user_exit"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_user_exit_1"
+                        android:layout_alignParentRight="true"
+                        android:padding="2dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        />
+
+
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="9dp"
+                    android:layout_marginLeft="9dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="10dp">
+
+
+                    <TextView
+                        android:id="@+id/txt_fonction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fonction"
+                        android:textSize="10dp" />
+
+
+
+
+                </LinearLayout>
+
+
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+
+
+    <ImageView
+        android:id="@+id/ic_exit"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:src="@drawable/ic_exit"
+        android:layout_below="@+id/card_account" />
+
+
+    <ImageView
+        android:id="@+id/ic_exit_log_out"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:src="@drawable/ic_exit_log_out"
+        android:layout_below="@+id/ic_exit"
+        android:layout_marginTop="60dp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp">
+
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dommage."
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/ic_exit"
+        android:textSize="20dp"
+        android:typeface="monospace"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Votre session a été éxpirée."
+            android:gravity="center_horizontal"
+            android:layout_below="@+id/ic_exit"
+            android:textSize="15dp"
+            android:typeface="monospace"/>
+
+        <RelativeLayout
+            android:id="@+id/btn_autre_session"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/rbtn_back_cloture"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Entrer une autre session"
+                android:typeface="monospace"
+                android:textSize="13sp" />
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_next" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+</RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
