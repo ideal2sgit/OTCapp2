@@ -48,7 +48,7 @@ public class HistoriqueLBCTask extends AsyncTask<String, String, String> {
     ConnectionClass connectionClass;
     String user, password, base, ip;
 
-    String NomUtilisateur ;
+    String NomUtilisateur="" ;
     DateFormat dtfSQL    = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
 
