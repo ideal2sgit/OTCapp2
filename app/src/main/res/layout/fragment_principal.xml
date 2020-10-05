@@ -533,6 +533,72 @@
 
 
                     <android.support.v7.widget.CardView
+                        android:id="@+id/btn_passation_de_reglement"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:layout_margin="10dp"
+                        card_view:cardCornerRadius="5dp"
+                        card_view:contentPadding="10dp"
+                        card_view:cardBackgroundColor="#edfcf9f9"
+                        card_view:cardElevation="6dp"
+                        card_view:cardMaxElevation="6dp">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+
+                            <RelativeLayout
+                                android:layout_width="80dp"
+                                android:layout_height="80dp">
+
+                                <ImageView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:src="@drawable/ic_passation_reglement"
+                                    android:padding="13dp"/>
+
+
+
+                            </RelativeLayout>
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="10dp"
+                                android:src="@drawable/line_h"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:layout_marginTop="10dp"
+                                android:text="Passation de règlement"
+                                android:textSize="15dp"
+                                android:gravity="center"/>
+
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.CardView
                         android:id="@+id/btn_historique_bc"
                         xmlns:card_view="http://schemas.android.com/apk/res-auto"
                         android:foreground="?android:attr/selectableItemBackground"
@@ -589,20 +655,8 @@
                         </LinearLayout>
                     </android.support.v7.widget.CardView>
 
-
-
-                </LinearLayout>
-
-
-
-                <LinearLayout
-                    android:gravity="center"
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-
-                    <android.support.v7.widget.CardView
+<!--
+                    <andrid.supoport.v7.widget.CardView
                         android:id="@+id/btn_bon_commande"
                         xmlns:card_view="http://schemas.android.com/apk/res-auto"
                         android:foreground="?android:attr/selectableItemBackground"
@@ -667,9 +721,9 @@
 
 
                         </LinearLayout>
-                    </android.support.v7.widget.CardView>
+                    </andrid.supoport.v7.widget.CardView>
 
-
+-->
 
 
                     <android.support.v7.widget.CardView

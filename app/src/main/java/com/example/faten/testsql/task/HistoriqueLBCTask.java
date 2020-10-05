@@ -34,7 +34,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class HistoriqueLBCTask extends AsyncTask<String, String, String> {
+public class HistoriqueLBCTask extends AsyncTask <String, String, String> {
 
 
     Activity activity;
@@ -69,7 +69,6 @@ public class HistoriqueLBCTask extends AsyncTask<String, String, String> {
         base = prefe.getString("base", base);
 
 
-
         SharedPreferences pref=activity.getSharedPreferences("usersession", Context.MODE_PRIVATE);
         SharedPreferences.Editor edt=pref.edit();
         NomUtilisateur= pref.getString("NomUtilisateur",NomUtilisateur);
@@ -83,6 +82,7 @@ public class HistoriqueLBCTask extends AsyncTask<String, String, String> {
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
+
         pb.setVisibility(View.VISIBLE);
     }
 

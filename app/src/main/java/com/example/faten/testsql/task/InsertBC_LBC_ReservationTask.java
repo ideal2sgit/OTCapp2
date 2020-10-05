@@ -208,15 +208,12 @@ public class InsertBC_LBC_ReservationTask extends AsyncTask<String, String, Stri
                         " \n" +
                         " SET @error = 0\n" +
                         "\n"
-
-
                         +  insertBC
                         +"   SET @error = @error + @@error  \n  "
                         + insertLBC
                         +"   SET @error = @error + @@error  \n  "
                         + insertReservation
                         +"   SET @error = @error + @@error  \n  "
-
 
                         + "  IF @error = 0  \n" +
                         "    COMMIT TRANSACTION insert_bc  \n" +

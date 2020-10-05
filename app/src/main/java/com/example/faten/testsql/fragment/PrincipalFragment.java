@@ -19,6 +19,7 @@ import com.example.faten.testsql.activity.HistoriqueBonCommande;
 import com.example.faten.testsql.R;
 import com.example.faten.testsql.SuivieMensuelActivity;
 import com.example.faten.testsql.activity.InventaireActivity;
+import com.example.faten.testsql.activity.PassationDeReglementActivity;
 import com.example.faten.testsql.activity.SuivieRecouvrementActivity;
 
 
@@ -31,9 +32,10 @@ public class PrincipalFragment extends Fragment {
     //private BoomMenuButton bmb;
 
     CardView  btn_client,btn_article ,
-            btn_bon_commande,
+           // btn_bon_commande,
             btn_bon_commande_avec_terminal,
-            btn_suivie_recouvrement ,
+            btn_suivie_recouvrement,
+            btn_passation_de_reglement  ,
             btn_suivie_mensuel  ,
             btn_historique_bon_commande,
             btn_inventaire ,
@@ -60,10 +62,13 @@ public class PrincipalFragment extends Fragment {
 
         btn_client = (CardView) fragmentView.findViewById(R.id.btn_client);
         btn_article  = (CardView)  fragmentView.findViewById(R.id.btn_article);
-        btn_bon_commande  = (CardView) fragmentView.findViewById(R.id.btn_bon_commande) ;
+       // btn_bon_commande  = (CardView) fragmentView.findViewById(R.id.btn_bon_commande) ;
         btn_bon_commande_avec_terminal = (CardView)  fragmentView.findViewById(R.id.btn_cmd_avec_terminal) ;
         btn_suivie_recouvrement = (CardView) fragmentView.findViewById(R.id.btn_suivie_recouvrement);
         btn_suivie_mensuel = (CardView) fragmentView.findViewById(R.id.btn_suivie_recouvrement);
+
+        btn_passation_de_reglement  = (CardView) fragmentView.findViewById(R.id.btn_passation_de_reglement);
+
 
         btn_historique_bon_commande= (CardView) fragmentView.findViewById(R.id.btn_historique_bc);
         btn_inventaire= (CardView) fragmentView.findViewById(R.id.btn_inventaire);
@@ -100,7 +105,7 @@ public class PrincipalFragment extends Fragment {
         });
 
 
-        btn_bon_commande.setOnClickListener(new View.OnClickListener() {
+      /*  btn_bon_commande.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -109,6 +114,9 @@ public class PrincipalFragment extends Fragment {
                 startActivity(in);
             }
         });
+        */
+
+
 
         btn_bon_commande_avec_terminal.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -189,6 +197,18 @@ public class PrincipalFragment extends Fragment {
                     ft.commit();
 
                 }
+
+            }
+        });
+
+
+
+        btn_passation_de_reglement.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent  toPassationReglement  = new Intent(getActivity()  , PassationDeReglementActivity.class) ;
+                startActivity(toPassationReglement);
 
             }
         });

@@ -101,7 +101,11 @@
         <activity
             android:name=".activity.BonCommandeTerminalAutomatiqueActivity"
             android:label="Commande Vente Automatique" />
-        <activity android:name=".activity.HistoriqueLigneBonCommandeActivity"></activity>
+        <activity android:name=".activity.HistoriqueLigneBonCommandeActivity" />
+
+        <activity android:name=".activity.PassationDeReglementActivity"
+            android:label="Passation de Règlement"
+            ></activity>
     </application>
 
 </manifest>
