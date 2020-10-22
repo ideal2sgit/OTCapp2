@@ -22,6 +22,7 @@ public class ReservationArticleDansDepot {
 
     int QTStock  ;
     int QtCMD    ;
+    int QTDefectueuse  ;
 
 
     public ReservationArticleDansDepot(String numeroBonCommandeVente, String codeArticle, String designation, String codeDepotDemendeur, String depotDemendeur, String telPhoneDemendeur, String codeDepotDemandant, String depotDemandant, String telPhoneDemandant, int quantite, int valider , int  Annuler  , int Cloturer) {
@@ -40,7 +41,7 @@ public class ReservationArticleDansDepot {
         this.Cloturer = Cloturer ;
     }
 
-    public ReservationArticleDansDepot(String numeroBonCommandeVente, String codeArticle, String designation, String codeDepotDemendeur, String DepotDemandeur ,  String codeDepotDemandant, String DepotDemandant, int quantite, int valider  ,int QTStock  , int QtCMD ) {
+    public ReservationArticleDansDepot(String numeroBonCommandeVente, String codeArticle, String designation, String codeDepotDemendeur, String DepotDemandeur ,  String codeDepotDemandant, String DepotDemandant, int quantite, int valider  ,int QTStock  , int QtCMD , int QTDefectueuse) {
 
         NumeroBonCommandeVente = numeroBonCommandeVente;
         CodeArticle = codeArticle;
@@ -57,6 +58,7 @@ public class ReservationArticleDansDepot {
 
         this.QTStock=QTStock ;
         this.QtCMD=QtCMD ;
+        this.QTDefectueuse=QTDefectueuse;
 
     }
 
@@ -183,6 +185,17 @@ public class ReservationArticleDansDepot {
     public void setQtCMD(int qtCMD) {
         QtCMD = qtCMD;
     }
+
+
+    public int getQTDefectueuse() {
+        return QTDefectueuse;
+    }
+
+    public void setQTDefectueuse(int QTDefectueuse) {
+        this.QTDefectueuse = QTDefectueuse;
+    }
+
+
 
     @Override
     public String toString() {

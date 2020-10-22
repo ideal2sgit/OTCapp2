@@ -313,17 +313,19 @@ public class BonCommandeVenteAvecTerminalActivity extends AppCompatActivity {
                                 int qt_tot_stock = 0;
                                 int qt_tot_cmd = 0;
                                 int qt_deja_commande = 0;
+                                int qt_tot_defectueuse  = 0;
 
                                 for (ArticleStock artS : listArticleDispo) {
                                     qt_deja_commande = artS.getQteCMD();
                                     qt_tot_stock = qt_tot_stock + artS.getQuantite();
+                                    qt_tot_defectueuse= qt_tot_defectueuse+artS.getQteDefectueuse() ;
                                 }
 
                                 for (ArticleStock artS : listArticleDispo) {
 
                                     if (artS.getNbrCLick() > 0) {
 
-                                        ReservationArticleDansDepot reservationArticleDansDepot = new ReservationArticleDansDepot("", artS.getCodeArticle(), artS.getDesignation(), CodeDepot,Depot , artS.getCodeDepot() ,artS.getDepot(), artS.getNbrCLick(), 0, qt_tot_stock , qt_deja_commande);
+                                        ReservationArticleDansDepot reservationArticleDansDepot = new ReservationArticleDansDepot("", artS.getCodeArticle(), artS.getDesignation(), CodeDepot,Depot , artS.getCodeDepot() ,artS.getDepot(), artS.getNbrCLick(), 0, qt_tot_stock , qt_deja_commande, qt_tot_defectueuse );
                                         listReservation.add(reservationArticleDansDepot);
 
                                         qt_tot_cmd = qt_tot_cmd + artS.getNbrCLick();
@@ -861,9 +863,8 @@ public class BonCommandeVenteAvecTerminalActivity extends AppCompatActivity {
                             "        \n" +
                             "        ) AS QteCMD" +
                             "    \n" +
-                            "\n" +
-                            "\n" +
-                            "\n" +
+                            "      ,( select ISNULL  ( SUM (Quantite ) ,0   ) from  [ArticleDefectueuseDansValise]  where CodeArticle = Stock.CodeArticle  and CodeDepot  = Stock.CodeDepot  and CodeCause ='01' ) as QteDefectueuse \n" +
+                            "      ,( select ISNULL  ( SUM (Quantite ) ,0   ) from  [ArticleDefectueuseDansValise]  where CodeArticle = Stock.CodeArticle  and CodeDepot  = Stock.CodeDepot  and CodeCause <> '01' ) as QteNonVendu " +
                             "\n" +
                             "from  Stock  \n" +
                             "inner join Depot on Depot.CodeDepot  = Stock.CodeDepot\n" +
@@ -872,6 +873,7 @@ public class BonCommandeVenteAvecTerminalActivity extends AppCompatActivity {
                             "  and (  Depot.PersonnePhysique  =  1  or  Depot.CodeDepot = '01'  )";
 
                     Log.e("queryArticle_x", queryArticle);
+
 
                     PreparedStatement ps = con.prepareStatement(queryArticle);
                     ResultSet rs = ps.executeQuery();
@@ -894,9 +896,13 @@ public class BonCommandeVenteAvecTerminalActivity extends AppCompatActivity {
 
                         int Quantite = rs.getInt("Quantite");
                         int QteCMD = rs.getInt("QteCMD");
+                        int QTeDefectueuse = rs.getInt("QTeDefectueuse");
+                        int QteNonVendu = rs.getInt("QteNonVendu");
 
 
-                        ArticleStock article = new ArticleStock(CodeDepot, Depot, TelPhone, CodeArticle, Designation, PrixVenteTTC, PrixVenteHT, PrixAchatHT, CodeTVA, 0, Quantite, QteCMD, 0);
+
+
+                        ArticleStock article = new ArticleStock(CodeDepot, Depot, TelPhone, CodeArticle, Designation, PrixVenteTTC, PrixVenteHT, PrixAchatHT, CodeTVA, 0, Quantite, QteCMD,QTeDefectueuse,QteNonVendu , 0);
                         listArticleDispo.add(article);
 
                         BonCommandeVenteAvecTerminalActivity.articleFoundCMD = new ArticleStock(CodeArticle, Designation, PrixVenteTTC, PrixVenteHT, PrixAchatHT, CodeTVA, 0, 0);
@@ -924,7 +930,7 @@ public class BonCommandeVenteAvecTerminalActivity extends AppCompatActivity {
 
             try {
 
-                txt_qt_cmd.setText("   " + listArticleDispo.get(0).getQteCMD() + "  CMD ");
+                txt_qt_cmd.setText(" " + listArticleDispo.get(0).getQteCMD() + "  CMD ");
 
             } catch (Exception ex) {
 

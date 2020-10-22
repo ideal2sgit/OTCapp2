@@ -6,14 +6,33 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg"
     android:padding="5dp"
-
     tools:context="com.example.faten.testsql.activity.HistoriqueBonCommande" >
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/buttonround">
+
+
+        <SearchView
+            android:id="@+id/search_bar_client"
+            android:layout_width="match_parent"
+            android:hint="Rechercher Client"
+            android:layout_height="50dp">
+        </SearchView>
+
+
+    </RelativeLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginTop="60dp">
 
     <!--    <Button
             android:id="@+id/btreload"

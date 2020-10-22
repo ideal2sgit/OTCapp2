@@ -19,6 +19,9 @@ public class ArticleStock {
     private    int   nbrCLick  ;
     private    int   QtePanier  ;
 
+    private    int  QteDefectueuse ;
+    private    int  QteNonVendu ;
+
     public ArticleStock() {
     }
 
@@ -34,7 +37,9 @@ public class ArticleStock {
         QtePanier = qtePanier;
     }
 
-    public ArticleStock (String codeDepot, String depot , String   TelPhone , String codeArticle, String designation, double prixVenteTTC, double prixVenteHT, double prixAchatHT, int codeTVA, double tauxTVA, int quantite, int QteCMD, int nbrCLick) {
+
+// list article dispo
+    public ArticleStock (String codeDepot, String depot , String   TelPhone , String codeArticle, String designation, double prixVenteTTC, double prixVenteHT, double prixAchatHT, int codeTVA, double tauxTVA, int quantite, int QteCMD,int  QteDefectueuse,int  QteNonVendu , int nbrCLick) {
         CodeDepot = codeDepot;
         Depot = depot;
         this.TelPhone = TelPhone ;
@@ -47,7 +52,10 @@ public class ArticleStock {
         TauxTVA = tauxTVA;
         Quantite = quantite;
         this.QteCMD = QteCMD;
+        this.QteDefectueuse=QteDefectueuse;
+        this.QteNonVendu=QteNonVendu;
         this.nbrCLick = nbrCLick;
+
     }
 
     public String getCodeArticle() {
@@ -171,15 +179,39 @@ public class ArticleStock {
     }
 
 
+    public int getQteDefectueuse() {
+        return QteDefectueuse;
+    }
+
+    public void setQteDefectueuse(int qteDefectueuse) {
+        QteDefectueuse = qteDefectueuse;
+    }
+
+    public int getQteNonVendu() {
+        return QteNonVendu;
+    }
+
+    public void setQteNonVendu(int qteNonVendu) {
+        QteNonVendu = qteNonVendu;
+    }
+
     @Override
     public String toString() {
-        return "ArticleStock{" +
+        return "\nArticleStock{" +
                 "CodeDepot='" + CodeDepot + '\'' +
+
+               // ", CodeArticle='" + CodeArticle + '\'' +
+
                 ", Quantite=" + Quantite +
+                ", QteCMD=" + QteCMD +
+                ", nbrCLick=" + nbrCLick +
+                ", QtePanier=" + QtePanier +
+                ", QteDefectueuse=" + QteDefectueuse +
                 '}';
     }
 
-   /* @Override
+
+    /* @Override
     public String toString() {
 
         return "ArticleStock{" +

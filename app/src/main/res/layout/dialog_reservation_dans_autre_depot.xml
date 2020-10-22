@@ -157,78 +157,113 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-             >
+            android:layout_height="match_parent">
 
 
-
-        <LinearLayout
-            android:id="@+id/ll_stock"
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="100dp">
-
-
-            <TextView
-                android:id="@+id/txt_"
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="0dp"
-                android:gravity="center"
-                android:text="QT Stock : "
-                android:textColor="@color/color_g_4"
-                />
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_alignParentRight="true">
+            <LinearLayout
+                android:id="@+id/ll_stock"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
 
-            <TextView
-                android:id="@+id/txt_qt_stock"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="0dp"
-                android:gravity="center"
-                android:text="50  "
-                android:textColor="@color/color_g_4"
-                android:textStyle="bold"
-            />
-        </LinearLayout>
+                android:orientation="horizontal">
 
 
-        <LinearLayout
-            android:id="@+id/ll_cmd"
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_toLeftOf="@+id/ll_stock"
-            android:layout_alignParentRight="true">
+                <TextView
+                    android:id="@+id/txt_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="0dp"
+                    android:gravity="center"
+                    android:text="QT Stock : "
+                    android:textColor="@color/color_g_4" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="0dp"
-                android:gravity="center"
-                android:text="CMD : "
-                android:textColor="@color/blue"/>
-
-
-
-            <TextView
-                android:id="@+id/txt_qt_commnder"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="0dp"
-                android:gravity="center"
-                android:text=" 0 CMD "
-                android:textColor="@color/blue"
-                android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/txt_qt_stock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="0dp"
+                    android:gravity="center"
+                    android:text="50  "
+                    android:textColor="@color/color_g_4"
+                    android:textStyle="bold" />
+            </LinearLayout>
 
 
-        </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_cmd"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_toLeftOf="@+id/ll_stock"
+                android:orientation="horizontal">
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="0dp"
+                    android:gravity="center"
+                    android:text="CMD : "
+                    android:textColor="@color/blue" />
+
+
+                <TextView
+                    android:id="@+id/txt_qt_commnder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="0dp"
+                    android:gravity="center"
+                    android:text=" 0 CMD "
+                    android:textColor="@color/blue"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_defectueuse"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/ll_cmd"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="0dp"
+                    android:gravity="center"
+                    android:text="Def : "
+                    android:textColor="@color/or" />
+
+                <TextView
+                    android:id="@+id/txt_qt_defectueuse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="0dp"
+                    android:gravity="center"
+                    android:text=" 0 def "
+                    android:textColor="@color/or"
+                    android:textStyle="bold" />
+
+
+
+            </LinearLayout>
+
+
+            </LinearLayout>
 
         </RelativeLayout>
 
@@ -252,6 +287,8 @@
             android:gravity="center"/>
 
 
+
+
         <android.support.v7.widget.CardView
             android:id="@+id/btn_valider_"
             android:layout_width="wrap_content"
@@ -264,8 +301,10 @@
             android:layout_marginTop="5dp"
             android:background="@color/blue"
             android:clickable="true"
+            android:visibility="invisible"
             android:foreground="?android:attr/selectableItemBackground"
             app:cardBackgroundColor="@color/blue">
+
 
 
             <LinearLayout

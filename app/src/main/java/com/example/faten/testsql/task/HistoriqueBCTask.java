@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.SearchView;
 import android.widget.Toast;
 
 import com.example.faten.testsql.ConnectionClass;
@@ -19,7 +20,9 @@ import com.example.faten.testsql.activity.HistoriqueBonCommande;
 import com.example.faten.testsql.R;
 import com.example.faten.testsql.activity.HistoriqueLigneBonCommandeActivity;
 import com.example.faten.testsql.adapter.BonCommandeAdapter;
+import com.example.faten.testsql.adapter.ClientSelectAdapterRV;
 import com.example.faten.testsql.model.BonCommandeVente;
+import com.example.faten.testsql.model.Client;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -39,7 +42,7 @@ public class HistoriqueBCTask extends AsyncTask<String, String, String> {
 
     ListView lv_hist_bc;
     ProgressBar pb;
-
+   SearchView search_bar_client ;
 
     String z = "";
     ConnectionClass connectionClass;
@@ -51,10 +54,11 @@ public class HistoriqueBCTask extends AsyncTask<String, String, String> {
 
      ArrayList<BonCommandeVente> listBonCommandeVente = new ArrayList<>() ;
 
-    public HistoriqueBCTask(Activity activity, ListView lv_hist_bc, ProgressBar pb) {
+    public HistoriqueBCTask(Activity activity, ListView lv_hist_bc, ProgressBar pb,  SearchView search_bar_client) {
         this.activity = activity;
         this.lv_hist_bc = lv_hist_bc;
         this.pb = pb;
+        this.search_bar_client = search_bar_client  ;
 
 
         SharedPreferences prefe = activity.getSharedPreferences("usersessionsql", Context.MODE_PRIVATE);
@@ -136,6 +140,32 @@ public class HistoriqueBCTask extends AsyncTask<String, String, String> {
 
         HistoriqueBonCommande.   bcAdapter = new BonCommandeAdapter(activity, listBonCommandeVente);
         lv_hist_bc.setAdapter(  HistoriqueBonCommande.bcAdapter );
+
+
+
+        search_bar_client.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+
+                if(!search_bar_client.isIconified())
+                {
+                    search_bar_client.setIconified(true);
+                }
+                return  false ;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String query) {
+
+                final  ArrayList<BonCommandeVente>   fitlerClientList = filterClientCMD  (listBonCommandeVente , query) ;
+
+
+                HistoriqueBonCommande.   bcAdapter = new BonCommandeAdapter(activity, fitlerClientList);
+                lv_hist_bc.setAdapter(  HistoriqueBonCommande.bcAdapter );
+
+                return false;
+            }
+        });
 
 
         lv_hist_bc.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -232,6 +262,24 @@ public class HistoriqueBCTask extends AsyncTask<String, String, String> {
     }
 
 
+    private ArrayList<BonCommandeVente> filterClientCMD (ArrayList<BonCommandeVente>  listClientCMD  , String term )  {
+
+        term = term.toLowerCase()  ;
+        final ArrayList<BonCommandeVente> filetrListClient  = new ArrayList<>() ;
+
+        for (BonCommandeVente c : listClientCMD)
+        {
+            final  String  txtRaisonSocial =  c.getReferenceClient().toLowerCase()  ;
+
+
+            if ( txtRaisonSocial.contains(term)  )
+            {
+                filetrListClient.add(c) ;
+            }
+        }
+        return  filetrListClient ;
+
+    }
 
     public class AnnulationBCTask extends AsyncTask<String, String, String> {
 

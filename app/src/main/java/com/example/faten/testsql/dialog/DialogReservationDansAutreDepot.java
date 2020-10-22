@@ -50,7 +50,7 @@ public class DialogReservationDansAutreDepot extends DialogFragment {
 
     Button btn_valider ;
 
-    TextView  txt_code_article  , txt_qt_stock  , txt_qt_cmd  , txt_qt_dispo  ;
+    TextView  txt_code_article  , txt_qt_stock  , txt_qt_cmd  , txt_qt_dispo ,txt_qt_defectueuse ;
 
 
     ArticleStock  article ;
@@ -85,6 +85,7 @@ public class DialogReservationDansAutreDepot extends DialogFragment {
         txt_qt_stock        = (TextView)  rootView.findViewById(R.id.txt_qt_stock) ;
         txt_qt_cmd          = (TextView)  rootView.findViewById(R.id.txt_qt_commnder) ;
         txt_qt_dispo        = (TextView)  rootView.findViewById(R.id.txt_qt_dispo) ;
+        txt_qt_defectueuse  = (TextView)  rootView.findViewById(R.id.txt_qt_defectueuse) ;
 
 
         //  filtrage des  article en cours
@@ -128,10 +129,11 @@ public class DialogReservationDansAutreDepot extends DialogFragment {
 
         txt_code_article.setText ( listReservationArticle.get(0) . getCodeArticle() );
 
-        QTDispo =   listReservationArticle.get(0).getQTStock() - listReservationArticle.get(0).getQtCMD() ;
+        QTDispo =   listReservationArticle.get(0).getQTStock() - listReservationArticle.get(0).getQtCMD() -listReservationArticle.get(0).getQTDefectueuse() ;
 
         txt_qt_cmd.setText(listReservationArticle.get(0).getQtCMD()+"");
         txt_qt_stock.setText(listReservationArticle.get(0).getQTStock()+"");
+        txt_qt_defectueuse.setText(listReservationArticle.get(0).getQTDefectueuse()+"");
         txt_qt_dispo.setText(QTDispo+"");
 
 

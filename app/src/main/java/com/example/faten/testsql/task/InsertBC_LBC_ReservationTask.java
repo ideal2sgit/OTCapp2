@@ -52,6 +52,8 @@ public class InsertBC_LBC_ReservationTask extends AsyncTask<String, String, Stri
 
     Boolean isSuccess = false;
 
+    String NomUtilisateur ;
+
     public InsertBC_LBC_ReservationTask(Activity activity, BonCommandeVente bonCommandeVente,    ArrayList<LigneBonCommandeVente>  listligneBonCommandeVente , ArrayList<ReservationArticleDansDepot> listReservation, ProgressBar pb) {
         this.activity = activity;
         this.bonCommandeVente = bonCommandeVente;
@@ -65,6 +67,10 @@ public class InsertBC_LBC_ReservationTask extends AsyncTask<String, String, Stri
         ip       = prefe.getString("ip", ip);
         password = prefe.getString("password", password);
         base     = prefe.getString("base", base);
+
+
+        SharedPreferences pref = activity.getSharedPreferences("usersession", Context.MODE_PRIVATE);
+        NomUtilisateur = pref.getString("NomUtilisateur", NomUtilisateur);
 
         connectionClass = new ConnectionClass();
 
@@ -200,6 +206,9 @@ public class InsertBC_LBC_ReservationTask extends AsyncTask<String, String, Stri
 
                 }
 
+
+                String  update_piece_def  = "\nupdate [ArticleDefectueuseDansValise] set NumeroBonCommande = '"+CompteurBC+"'  where NumeroBonCommande = 'bc_"+NomUtilisateur+"' \n" ;
+
                 String    queryInsert = " " +
                         " BEGIN TRANSACTION insert_bc  \n" +
                         " \n" +
@@ -213,6 +222,9 @@ public class InsertBC_LBC_ReservationTask extends AsyncTask<String, String, Stri
                         + insertLBC
                         +"   SET @error = @error + @@error  \n  "
                         + insertReservation
+                        +"   SET @error = @error + @@error  \n  "
+
+                        + update_piece_def
                         +"   SET @error = @error + @@error  \n  "
 
                         + "  IF @error = 0  \n" +

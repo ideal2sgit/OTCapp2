@@ -43,14 +43,12 @@ public class HistoriqueLBCTask extends AsyncTask <String, String, String> {
     String NumeroBC ;
     ProgressBar pb;
 
-
     String z = "";
     ConnectionClass connectionClass;
     String user, password, base, ip;
 
     String NomUtilisateur="" ;
     DateFormat dtfSQL    = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-
 
     ArrayList<LigneBonCommandeVente> listLigneBonCommandeVente = new ArrayList<>() ;
 

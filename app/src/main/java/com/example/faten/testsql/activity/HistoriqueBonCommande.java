@@ -17,6 +17,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.SearchView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
@@ -40,6 +41,7 @@ public class HistoriqueBonCommande extends AppCompatActivity {
 
     ListView lv_list_historique_bc;
     ProgressBar  pb_bc  ;
+    SearchView search_bar_client ;
 
     ConnectionClass connectionClass;
     String NomUtilisateur,codeclient,rsclient="",mail="",Nbcmd="",date,nbcmd,totale;
@@ -56,6 +58,7 @@ public class HistoriqueBonCommande extends AppCompatActivity {
 
         lv_list_historique_bc=(ListView)findViewById(R.id.lv_list_historique_bc);
         pb_bc  = (ProgressBar)  findViewById(R.id.pb_bc) ;
+        search_bar_client = (SearchView)   findViewById(R.id.search_bar_client) ;
 
         connectionClass = new ConnectionClass();
 
@@ -80,7 +83,7 @@ public class HistoriqueBonCommande extends AppCompatActivity {
         bonCommandeAdapter  = new BonCommandeAdapter(this , listBC) ;
         lv_list_historique_bc.setAdapter(bonCommandeAdapter);*/
 
-        HistoriqueBCTask  historiqueBCTask  = new HistoriqueBCTask(this ,lv_list_historique_bc  , pb_bc) ;
+        HistoriqueBCTask  historiqueBCTask  = new HistoriqueBCTask(this ,lv_list_historique_bc  , pb_bc,search_bar_client) ;
         historiqueBCTask.execute() ;
 
 
