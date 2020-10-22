@@ -23,7 +23,8 @@
     <color name="etat">#b7141f</color>
     <color name="colortxt">#787878</color>
 
-
+    <color name="back_card_inactive">#e9f2f2f2</color>
+    <color name="back_card_coture">#e9f9f9f9</color>
 
 
 
@@ -144,6 +145,7 @@
 
     <color name="color_g_21">#0b3ca6</color>
     <color name="color_g_22">#640bb1</color>
+    <color name="color_retenu">#d9e6f2</color>
 
 
 </resources>

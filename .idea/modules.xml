@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/OTCapp2.iml" filepath="$PROJECT_DIR$/OTCapp2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/OTCapp2-app.iml" filepath="$PROJECT_DIR$/app/OTCapp2-app.iml" group="OTCapp2/app" />
+      <module fileurl="file://$PROJECT_DIR$/android-OTCapp2.iml" filepath="$PROJECT_DIR$/android-OTCapp2.iml" group="OTCapp2" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

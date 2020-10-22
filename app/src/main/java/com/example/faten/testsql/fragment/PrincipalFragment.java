@@ -19,6 +19,7 @@ import com.example.faten.testsql.activity.HistoriqueBonCommande;
 import com.example.faten.testsql.R;
 import com.example.faten.testsql.SuivieMensuelActivity;
 import com.example.faten.testsql.activity.InventaireActivity;
+import com.example.faten.testsql.activity.MenuReglement;
 import com.example.faten.testsql.activity.PassationDeReglementActivity;
 import com.example.faten.testsql.activity.SuivieRecouvrementActivity;
 
@@ -207,7 +208,7 @@ public class PrincipalFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                Intent  toPassationReglement  = new Intent(getActivity()  , PassationDeReglementActivity.class) ;
+                Intent  toPassationReglement  = new Intent(getActivity()  , MenuReglement.class) ;
                 startActivity(toPassationReglement);
 
             }
